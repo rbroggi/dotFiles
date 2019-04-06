@@ -4,7 +4,7 @@ My Ubuntu setup step by step:
 1. first packages and git config:
 
 ```bash
-$ sudo apt-get install i3 vim python git
+$ sudo apt-get install i3 vim python git xclip
 $ git config --global user.email <email>
 $ git config --global user.name <user> 
 ```
