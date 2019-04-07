@@ -25,3 +25,9 @@ $ git clone --separate-git-dir=$HOME/.dotfiles <remote_dotfiles_repo> tmpdotfile
 $ rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
 $ rm -r tmpdotfiles
 ```
+
+#Acknowledgements
+
+Big thanks to Luke Smith for the inspiring lessons from his [videos]{https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA} and from his [repos ]{https://github.com/LukeSmithxyz}.
+
+Also big thanks to Alex Booker for the nice work in this [playlist]{https://www.youtube.com/watch?v=j1I63wGcvU4&list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf} and for his [repos]{https://github.com/alexbooker}
