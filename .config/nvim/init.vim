@@ -22,6 +22,7 @@
   " call dein#add('maxmellon/vim-jsx-pretty')
   " call dein#add('othree/es.next.syntax.vim')
   " call dein#add('othree/jsdoc-syntax.vim')
+  call dein#add('mboughaba/i3config.vim')
   call dein#add('heavenshell/vim-jsdoc')
   call dein#add('elzr/vim-json')
   call dein#add('HerringtonDarkholme/yats.vim')
