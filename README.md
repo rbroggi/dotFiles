@@ -26,7 +26,7 @@ $ rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
 $ rm -r tmpdotfiles
 ```
 
-#Acknowledgements
+# Acknowledgements
 
 Big thanks to Luke Smith for the inspiring lessons from his [videos](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA) and from his [repos ](https://github.com/LukeSmithxyz).
 
