@@ -146,7 +146,9 @@
   set number
   " let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
   set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
-  set clipboard+=unnamedplus
+  " For mac
+  " set clipboard+=unnamedplus
+  set clipboard=unnamed
   set pastetoggle=<f6>
   set nopaste
   autocmd BufWritePre * %s/\s\+$//e
