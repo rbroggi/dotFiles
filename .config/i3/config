@@ -21,6 +21,8 @@ exec --no-startup-id compton -f
 exec --no-startup-id remaps.sh
 # Unclutter makes the mouse invisible after a brief period
 exec --no-startup-id unclutter
+# Execute layout script
+exec --no-startup-id ~/.screenlayout/i3WorkLaout.sh
 # sync PRIMARY and CLIPBOARD selections
 exec_always --no-startup-id clipboard.sh
 # startup
@@ -34,6 +36,8 @@ font pango:Ubuntu Mono Nerd Font Complete Mono 9
 #bindings:
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# hibernate suspend pc
+bindsym $mod+Escape exec "i3-nagbar -t warning -m 'You pressed the suspend shortcut. Do you really want to suspend? This will suspend.' -b 'Yes, suspendi3' i3-msg exit'"
 # Show selection: dunst
 bindsym $mod+Insert		exec --no-startup-id showclip.sh
 # Show selection: barcode
@@ -179,7 +183,7 @@ bindsym $mod+r			restart
 # finds out, if available)
 bar {
   #font pango: System San Francisco Display 9
-  font pango:Ubuntu Mono Nerd Font Complete Mono 9
+  font pango:Ubuntu Mono Nerd Font Complete Mono 12
   status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	colors {
 		background $bg-color
