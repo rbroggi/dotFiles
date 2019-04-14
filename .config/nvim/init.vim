@@ -126,7 +126,8 @@
   call dein#add('drzel/vim-line-no-indicator')
   call dein#add('Quramy/vison')
   call dein#add('ryanoasis/vim-devicons')
-  call dein#add('junegunn/fzf')
+  call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+  call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
   if dein#check_install()
     call dein#install()
     let pluginsExist=1
@@ -148,7 +149,7 @@
   set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
   " For mac
   " set clipboard+=unnamedplus
-  set clipboard=unnamed
+  set clipboard=unnamedplus
   set pastetoggle=<f6>
   set nopaste
   autocmd BufWritePre * %s/\s\+$//e
@@ -164,6 +165,7 @@
   set wrap linebreak nolist
   set wildmode=full
   set autoread
+  set noautochdir
   set updatetime=500
   set fillchars+=vert:│
 " leader is ,
@@ -217,7 +219,6 @@
   inoremap <c-d> <esc>ddi
   noremap H ^
   noremap L g_
-  noremap J 5j
   noremap K 5k
   " nnoremap K 5k
 " this is the best, let me tell you why
@@ -561,6 +562,14 @@
   let g:user_emmet_complete_tag = 0
   let g:user_emmet_install_global = 0
   autocmd FileType html,css,scss EmmetInstall
+"}}}
+" fzf --------------------------------------------------------------------{{{
+"
+  nnoremap <silent> <expr> <Leader><Leader> (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+  nnoremap <silent> <Leader>C        :Colors<CR>
+  nnoremap <silent> <Leader><Enter>  :Buffers<CR>
+  nnoremap <silent> <Leader>L        :Lines<CR>
+
 "}}}
 
 " Denite --------------------------------------------------------------------{{{

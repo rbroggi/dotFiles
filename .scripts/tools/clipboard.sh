@@ -1,4 +1,5 @@
 #!/bin/bash
 
 autocutsel -fork &
-autocutsel -selection PRIMARY -fork &
+#commented because idea vim is copying to PRIMARY in visual selection
+#autocutsel -selection PRIMARY -fork &

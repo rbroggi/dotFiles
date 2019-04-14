@@ -10,7 +10,8 @@ sudo apt-get install i3 vim python git xclip python-dev python-pip python3-dev p
 sudo npm install -g neovim
 git config --global user.email <email>
 git config --global user.name <user>
-mkdir -p ~/.fonts
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf #for fzf
+~/.fzf/install #installing fzf
 ```
 2. setup your dotfile-tracking specialized git command. With this command you will have your dotfiles (complete explanations [here](https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html):
 

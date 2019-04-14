@@ -23,11 +23,12 @@ exec --no-startup-id remaps.sh
 exec --no-startup-id unclutter
 # Execute layout script
 exec --no-startup-id ~/.screenlayout/i3WorkLaout.sh
-# sync PRIMARY and CLIPBOARD selections
-exec_always --no-startup-id clipboard.sh
+# sync PRIMARY and CLIPBOARD selections -> causing problems with ideavim selection mode
+exec --no-startup-id clipboard.sh
 # startup
 # wallpaper:
 exec_always --no-startup-id feh --bg-scale ~/.wallpaper.jpg
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -35,9 +36,9 @@ font pango:Ubuntu Mono Nerd Font Complete Mono 9
 
 #bindings:
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # hibernate suspend pc
-bindsym $mod+Escape exec "i3-nagbar -t warning -m 'You pressed the suspend shortcut. Do you really want to suspend? This will suspend.' -b 'Yes, suspendi3' i3-msg exit'"
+# bindsym $mod+Escape exec "i3-nagbar -t warning -m 'You pressed the suspend shortcut. Do you really want to suspend? This will suspend.' -b 'Yes, suspendi3' sudo systemctl suspend'"
 # Show selection: dunst
 bindsym $mod+Insert		exec --no-startup-id showclip.sh
 # Show selection: barcode
@@ -202,3 +203,32 @@ bar {
 # disable title bar
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
+
+#media keys
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym $mod+plus exec --no-startup-id pactl set-sink-volume 0 +10% #increase sound volume
+bindsym $mod+minus exec --no-startup-id pactl set-sink-volume 0 -10% #increase sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+#print screen
+bindsym $mod+p exec gnome-screenshot -i
+bindsym Print exec gnome-screenshot -i
+
+
+#suspend exit and so on
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit.sh lock, mode "default"
+    bindsym e exec --no-startup-id i3exit.sh logout, mode "default"
+    bindsym s exec --no-startup-id i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit.sh shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+Escape mode "$mode_system"
