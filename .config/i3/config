@@ -202,7 +202,7 @@ bar {
 
 # disable title bar
 for_window [class="^.*"] border pixel 1
-new_window 1pixel
+new_window pixel 1
 
 #media keys
 # Pulse Audio controls

@@ -29,6 +29,12 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+#go
+export GOROOT="$HOME/go_root"
+export GOPATH="$HOME/go"
+
+# PATH additions
+
 # Adds `~/.scripts` and all subdirectories to $PATH
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
 export PATH="$PATH:$(du "$HOME/.commands/" | cut -f2 | tr '\n' ':')"
@@ -38,3 +44,9 @@ export PATH="$PATH:$HOME/.programs/clion-2019.1/bin:$HOME/.programs/idea-IU-191.
 
 #tts
 export PATH="$PATH:$HOME/.programs/tts"
+
+#go binaries
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+
+
+
