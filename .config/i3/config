@@ -212,6 +212,11 @@ bindsym $mod+plus exec --no-startup-id pactl set-sink-volume 0 +10% #increase so
 bindsym $mod+minus exec --no-startup-id pactl set-sink-volume 0 -10% #increase sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
+# Brightness with custom script
+bindsym XF86MonBrightnessUp exec --no-startup-id brighness.sh 10 #increase brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id brighness.sh -10 #decrease brightness
+
+
 #print screen
 bindsym $mod+p exec gnome-screenshot -i
 bindsym Print exec gnome-screenshot -i
