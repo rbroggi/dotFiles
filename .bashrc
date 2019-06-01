@@ -92,4 +92,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# last part of the command makes CTRL+R default to exact match and if the
+# researched string is prefixed with ' then it will be fuzzy finded
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash && export FZF_CTRL_R_OPTS='--exact'

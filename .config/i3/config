@@ -45,6 +45,9 @@ bindsym $mod+Insert		exec --no-startup-id showclip.sh
 bindsym $mod+Shift+b		exec --no-startup-id xcqr.sh
 # kill focused window
 bindsym $mod+q kill
+# Move workspace to next other output device
+bindsym $mod+m move workspace to output right
+
 
 # configure wi-fi connection (wifi, network)
 bindsym $mod+Shift+w		exec nmtui
