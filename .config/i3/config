@@ -18,7 +18,7 @@ exec --no-startup-id dunst
 # composite manager for transparency
 exec --no-startup-id compton -f
 # Runs the key remapping scripts
-exec --no-startup-id remaps.sh
+exec_always --no-startup-id remaps.sh
 # Unclutter makes the mouse invisible after a brief period
 exec --no-startup-id unclutter
 # Execute layout script
@@ -109,6 +109,9 @@ bindsym $mod+Shift+y		exec --no-startup-id i3resize.sh left
 bindsym $mod+Shift+u		exec --no-startup-id i3resize.sh down
 bindsym $mod+Shift+i		exec --no-startup-id i3resize.sh up
 bindsym $mod+Shift+o		exec --no-startup-id i3resize.sh right
+
+# switch between us and us-international keyboards
+bindsym $mod+s exec --no-startup-id switch_keyboards.sh
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
