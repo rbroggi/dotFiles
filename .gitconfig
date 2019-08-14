@@ -1206,3 +1206,5 @@
 
   ull = pull
   ush = push
+[core]
+	autocrlf = input

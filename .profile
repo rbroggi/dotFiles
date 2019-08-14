@@ -40,7 +40,7 @@ export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
 export PATH="$PATH:$(du "$HOME/.commands/" | cut -f2 | tr '\n' ':')"
 
 #JetBrains
-export PATH="$PATH:$HOME/.programs/clion-2019.1/bin:$HOME/.programs/idea-IU-191.6183.87/bin:$HOME/.programs/pycharm-2019.1.1/bin:$HOME/.programs/WebStorm-191.6183.63/bin:$HOME/.programs/GoLand-2019.1/bin"
+export PATH="$PATH:$HOME/.programs/clion-2019.1/bin:$HOME/.programs/idea-IU-191.6183.87/bin:$HOME/.programs/pycharm-2019.1.1/bin:$HOME/.programs/WebStorm-191.6183.63/bin:$HOME/.programs/GoLand-2019.1/bin:$HOME/.programs/ulam:"
 
 #tts
 export PATH="$PATH:$HOME/.programs/tts"
