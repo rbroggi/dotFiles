@@ -45,6 +45,10 @@ export PATH="$PATH:$HOME/.programs/clion-2019.1/bin:$HOME/.programs/idea-IU-191.
 #tts
 export PATH="$PATH:$HOME/.programs/tts"
 
+#AT - amadeus_terminal
+export PATH="$PATH:$HOME/.programs/amadeus_terminal/amadeus_terminal"
+
+
 #go binaries
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 

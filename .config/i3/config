@@ -255,3 +255,6 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Shift+Escape mode "$mode_system"
+
+# This last line is only to automatically set the ft for syntax highlighting in nvim/vim
+# vim:filetype=i3config
