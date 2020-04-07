@@ -9,6 +9,8 @@
 	current = yellow bold
 	local = green bold
 	remote = cyan bold
+[mergetool "vimdiff"]
+  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
 [alias]
   ##
   # One letter alias for our most frequent commands.

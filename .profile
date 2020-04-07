@@ -39,8 +39,16 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
 export PATH="$PATH:$(du "$HOME/.commands/" | cut -f2 | tr '\n' ':')"
 
+# Adds anyconnect vpn access
+export PATH="$PATH:/opt/cisco/anyconnect/bin"
+
+
 #JetBrains
 export PATH="$PATH:$HOME/.programs/clion-2019.1/bin:$HOME/.programs/idea-IU-191.6183.87/bin:$HOME/.programs/pycharm-2019.1.1/bin:$HOME/.programs/WebStorm-191.6183.63/bin:$HOME/.programs/GoLand-2019.1/bin:$HOME/.programs/ulam:"
+
+#Bat (enhanced cat)
+export PATH="$PATH:$HOME/.programs/bat-v0.12.1-x86_64-unknown-linux-gnu"
+export BAT_THEME="1337"
 
 #tts
 export PATH="$PATH:$HOME/.programs/tts"
@@ -51,6 +59,10 @@ export PATH="$PATH:$HOME/.programs/amadeus_terminal/amadeus_terminal"
 
 #go binaries
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+
+#pachctl - pachiderm
+export PATH="$PATH:$HOME/.programs/pachctl"
+
 
 
 
